@@ -40,34 +40,8 @@ http
                         body = JSON.parse(body);
                         let deleteThis = body.item;
 
-                        // for (let i = 0; i < toDoList.length; i++) {
-                        //     if (toDoList[i] === deleteThis) {
-                        //         toDoList.splice(i, 1);
-                        //         break;
-                        //     }
-                        // }
-
-
-                        toDoList.find((element, index) => {
-                            if (element === deleteThis) {
-                                toDoList.splice(index, 1)
-                            }
-                        });
-
-                        res.writeHead(204);
-                    });
-            } else {
-                res.writeHead(501);
-            }
-
-        } else {
-            res.writeHead(404);
-        }
-
-        res.end();
-    })
-    .listen(port, () => {                         //callback function
-        console.log(`Nodejs server started on port ${port}`);
-    });
-
+app.listen(port, () => {
+    // callback
+    console.log(`Nodejs server started on port ${port}`);
+});
 // http://localhost:8081
